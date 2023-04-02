@@ -75,9 +75,9 @@ $query_builder = true;
 
 $db['default'] = array(
     'dsn'    => '',
-    'hostname' => 'localhost:3307',
-    'username' => 'root',
-    'password' => '',
+    'hostname' => 'mysql-119134-0.cloudclusters.net',
+    'username' => 'admin',
+    'password' => 'fAkqTSbU',
     'database' => 'balai1',
     'dbdriver' => 'mysqli',
     'dbprefix' => '',
