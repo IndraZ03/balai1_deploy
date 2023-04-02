@@ -6,12 +6,15 @@ class User extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        is_logged_in();
+        $this->load->helper('url', 'form');
+        $this->load->library('form_validation');
+        $this->load->model('DatabaseEsign');
+        //is_logged_in();
     }
 
     public function index()
     {
-        $data['title'] = 'My Profile';
+        $data['title'] = 'Dashboard';
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
         $this->load->view('templates/header', $data);
@@ -30,6 +33,114 @@ class User extends CI_Controller
         $this->load->view('user/profile', $data);
         $this->load->view('templates/footer');
     }
+
+    public function bidang_observasi()
+    {
+        $data['title'] = 'Bidang Observasi';
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar-1', $data);
+        $this->load->view('templates/topbar-balai', $data);
+        $this->load->view('templates/bidang_observasi', $data);
+        $this->load->view('templates/footer');
+    }
+
+    public function dokumen_inskal()
+    {
+        $data['title'] = 'Pengajuan E-Sign';
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        //visualiasi data
+        $data['dokumen_inskal'] = $this->DatabaseEsign->GetDataDokumenInskal();
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar-1', $data);
+        $this->load->view('templates/topbar-balai', $data);
+        $this->load->view('templates/dokumen_inskal', $data);
+        $this->load->view('templates/footer');
+    }
+
+
+    public function dokumen_kasubid_inskal()
+    {
+        $data['title'] = 'Kasubid Inskal';
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        //visualiasi data
+        $data['dokumen_inskal'] = $this->DatabaseEsign->GetDataDokumenInskal();
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar-1', $data);
+        $this->load->view('templates/topbar-balai', $data);
+        $this->load->view('templates/inskal-kasubid', $data);
+        $this->load->view('templates/footer', $data);
+    }
+
+    public function dokumen_poolbar()
+    {
+        $data['title'] = 'Pengajuan E-Sign';
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        //visualiasi data
+        $data['dokumen_poolbar'] = $this->DatabaseEsign->GetDataDokumenPoolbar();
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar-1', $data);
+        $this->load->view('templates/topbar-balai', $data);
+        $this->load->view('templates/dokumen_poolbar', $data);
+        $this->load->view('templates/footer');
+    }
+
+    public function dokumen_kasubid_poolbar()
+    {
+        $data['title'] = 'Kasubid Poolbar';
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        //visualiasi data
+        $data['dokumen_poolbar'] = $this->DatabaseEsign->GetDataDokumenPoolbar();
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar-1', $data);
+        $this->load->view('templates/topbar-balai', $data);
+        $this->load->view('templates/poolbar-kasubid', $data);
+        $this->load->view('templates/footer');
+    }
+
+    public function bo_kabid()
+    {
+        $data['title'] = 'Kabid Bidang I';
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar-1', $data);
+        $this->load->view('templates/topbar-balai', $data);
+        $this->load->view('templates/bo_kabid', $data);
+        $this->load->view('templates/footer');
+    }
+    public function bo_kabid_inskal()
+    {
+        $data['title'] = 'Kabid Bidang I';
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        //visualiasi data
+        $data['dokumen_inskal'] = $this->DatabaseEsign->GetDataDokumenInskal();
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar-1', $data);
+        $this->load->view('templates/topbar-balai', $data);
+        $this->load->view('templates/bo_kabid_inskal', $data);
+        $this->load->view('templates/footer');
+    }
+    public function bo_kabid_poolbar()
+    {
+        $data['title'] = 'Kabid Bidang I';
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        //visualiasi data
+        $data['dokumen_poolbar'] = $this->DatabaseEsign->GetDataDokumenPoolbar();
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar-1', $data);
+        $this->load->view('templates/topbar-balai', $data);
+        $this->load->view('templates/bo_kabid_poolbar', $data);
+        $this->load->view('templates/footer');
+    }
+
 
 
 

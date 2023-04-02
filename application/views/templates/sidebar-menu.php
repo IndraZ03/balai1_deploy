@@ -13,25 +13,30 @@
     <hr class="sidebar-divider my-0">
 
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item active">
-        <a class="nav-link" href="<?= base_url('balai'); ?>">
-            <span>Dashboard</span></a>
-    </li>
+
 
     <!-- Divider -->
     <hr class="sidebar-divider">
+    <?php
+    $role = $this->session->userdata('role_id');
+    if ($role == '1') {
+        $dashboard = 'admin';
+    } elseif ($role == '2' || $role == '3' || $role == '4' || $role == '5' || $role == '6') {
+        $dashboard = 'user';
+    } else {
+        $dashboard = 'balai';
+    } ?>
 
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item active">
+        <a class="nav-link" href="<?= base_url($dashboard)  ?>">
+            <i class="fas fa-2x fa-fw  fa-home"></i>
+            <span style="font-size: 15px;">Dashboard</span></a>
+    </li>
     <!-- Heading -->
 
     <!-- Nav Item - Pages Collapse Menu -->
-    <li class="nav-item">
 
-
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="esign.php" data-toggle="modal" data-target="#logoutModal">
-            <span>Logout</span>
-        </a>
-    </li>
 
     <hr class="sidebar-divider">
 

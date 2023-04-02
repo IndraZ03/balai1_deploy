@@ -1,4 +1,4 @@
-<?php 
+<?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
 class Menu_model extends CI_Model
@@ -10,5 +10,10 @@ class Menu_model extends CI_Model
                   ON `user_sub_menu`.`menu_id` = `user_menu`.`id`
                 ";
         return $this->db->query($query)->result_array();
+    }
+
+    public function getAll()
+    {
+        return $this->db->get($this->_table)->result();
     }
 }

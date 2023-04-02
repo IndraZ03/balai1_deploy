@@ -1,16 +1,21 @@
 <!-- End of Topbar -->
 
 <!-- Begin Page Content -->
-<div class="container-fluid">
+<div class="container">
 
     <!-- Page Heading -->
     <h1 class="h3 mb-4 text-gray-800 text-center text-uppercase ">Balai Besar MKG Wilayah I</h1>
 
-    <div class="row ml-5 mr-5 mb-5 mt-5">
+    <div class="row mr-sm-4 ml-sm-7  ml-3 mb-5 mt-6  text-center">
         <div class="col-md-4 col-sm-6">
             <a href="SMAM.php">
                 <div class="serviceBox shadow-lg rounded">
-                    <h3 class="title text-uppercase">Sistem Monitoring Aloptama Meteorologi</h3>
+                    <span>
+                        <h3 class="title text-uppercase">Sistem Monitoring Aloptama Meteorologi</h3>
+                    </span>
+                    <span class='service-icon text-center'>
+                        <img src="<?= base_url('assets/'); ?>img/Icon Layanan Jarkom-01.png">
+                    </span>
                 </div>
             </a>
 
@@ -19,7 +24,12 @@
         <div class="col-md-4 col-sm-6 text-center">
             <a href="SMAK.php">
                 <div class="serviceBox shadow-lg rounded">
-                    <h3 class="title text-uppercase">Sistem Monitoring Aloptama Klimatologi</h3>
+                    <span>
+                        <h3 class="title text-uppercase">Sistem Monitoring Aloptama Klimatologi</h3>
+                    </span>
+                    <span class='service-icon text-center'>
+                        <img src="<?= base_url('assets/'); ?>img/Icon Layanan Jarkom-17.png">
+                    </span>
                 </div>
             </a>
         </div>
@@ -27,36 +37,54 @@
         <div class="col-md-4 col-sm-6">
             <a href="SMAG.php">
                 <div class="serviceBox shadow-lg rounded">
-                    <h3 class="title text-uppercase">Sistem Monitoring Aloptama Geofisika</h3>
+                    <span>
+                        <h3 class="title text-uppercase">Sistem Monitoring Aloptama Geofisika</h3>
+                    </span>
+                    <span class='service-icon text-center'>
+                        <img src="<?= base_url('assets/'); ?>img/Icon Layanan Jarkom-08.png">
+                    </span>
                 </div>
             </a>
 
         </div>
     </div>
     <!--row kedua -->
-    <div class="row ml-5 mr-5 mb-5 mt-5">
+    <div class="row mr-sm-4 ml-sm-7  ml-3 mb-5 mt-6 text-center">
         <div class="col-md-4 col-sm-6">
-            <a href="BO.php">
-                <div class="serviceBox shadow-lg rounded">
-                    <h3 class="title mt-3 text-uppercase">Bidang I Observasi</h3>
+            <a href="<?= base_url('user/bidang_observasi'); ?>">
+                <div class=" serviceBox shadow-lg rounded">
+                    <span>
+                        <h3 class="title text-uppercase">Bidang I Observasi</h3>
+                    </span>
+                    <span class='service-icon text-center'>
+                        <img src="<?= base_url('assets/'); ?>img/Icon Layanan Jarkom-07.png">
+                    </span>
                 </div>
             </a>
 
         </div>
 
         <div class="col-md-4 col-sm-6 text-center">
-            <a href="BDI.php">
-                <div class="serviceBox shadow-lg rounded">
-                    <h3 class="title mt-3 text-uppercase">Bidang II Data & Informasi</h3>
-                </div>
-            </a>
+            <div class="serviceBox shadow-lg rounded">
+                <span>
+                    <h3 class="title text-uppercase">Bidang II Data & Informasi</h3>
+                </span>
+                <span class='service-icon text-center'>
+                    <img src="<?= base_url('assets/'); ?>img/Icon Layanan Jarkom-02.png">
+                </span>
+            </div>
 
         </div>
 
         <div class="col-md-4 col-sm-6">
             <a href="A.php">
                 <div class="serviceBox shadow-lg rounded">
-                    <h3 class="title mt-3">A</h3>
+                    <span>
+                        <h3 class="title text-uppercase">Tata Usaha</h3>
+                    </span>
+                    <span class='service-icon text-center'>
+                        <img src="<?= base_url('assets/'); ?>img/Icon Layanan Jarkom-13.png">
+                    </span>
                 </div>
             </a>
 
@@ -64,37 +92,49 @@
     </div>
 
     <!--ketiga -->
-    <div class="row ml-5 mr-5 mb-5 mt-5 justify-content-center">
+    <div class="row mr-sm-4 ml-sm-7 ml-3 mb-5 mt-6 justify-content-center">
 
         <div class="col-md-4 col-sm-6 text-center">
-            <a href="<?= base_url('balai/esign'); ?>" class="gbh">
+            <a href="<?= base_url('balai/esign'); ?>">
                 <div class="serviceBox shadow-lg rounded">
-
-                    <h3 class="title mt-3 text-uppercase">E-Sign</h3>
+                    <span>
+                        <h3 class="title text-uppercase">E-Sign</h3>
+                    </span>
+                    <span class='service-icon text-center'>
+                        <img src="<?= base_url('assets/'); ?>img/Icon Layanan Jarkom-04.png">
+                    </span>
                 </div>
             </a>
 
         </div>
 
         <div class="col-md-4 col-sm-6 text-center">
-            <a href="B.php" class="gbh">
+            <a href="B.php">
                 <div class="serviceBox shadow-lg rounded">
-
-                    <h3 class="title mt-3 text-uppercase">B</h3>
+                    <span>
+                        <h3 class="title text-uppercase">B</h3>
+                    </span>
+                    <span class='service-icon text-center'>
+                        <img src="<?= base_url('assets/'); ?>img/Icon Layanan Jarkom-16.png">
+                    </span>
                 </div>
             </a>
 
         </div>
+
         <div class="col-md-4 col-sm-6 text-center">
-            <a href="<?= base_url('admin/menu'); ?>" class="gbh">
-                <div class="serviceBox shadow-lg rounded">
-
-                    <h3 class="title mt-3 text-uppercase">Menu Manajemen</h3>
+            <a href="<?= base_url('admin/menu'); ?>">
+                <div class=" serviceBox shadow-lg rounded">
+                    <span>
+                        <h3 class="title text-uppercase">Menu Manajemen</h3>
+                    </span>
+                    <span class='service-icon text-center'>
+                        <img src="<?= base_url('assets/'); ?>img/Icon Layanan Jarkom-10.png">
+                    </span>
                 </div>
             </a>
 
         </div>
-
 
 
 
@@ -105,13 +145,6 @@
 
 
 <!-- Footer -->
-<footer class="footer fixed-bottom bg-white">
-    <div class="container my-auto">
-        <div class="copyright text-center my-auto p-3">
-            <span>Copyright &copy; Sistem Monitoring</span>
-        </div>
-    </div>
-</footer>
 
 <!-- End of Footer -->
 

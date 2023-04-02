@@ -8,13 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="https://epengawasan.bmkg.go.id/apip/images/favicon.ico" type="ico">
+    <link rel="icon" href=<?php echo base_url() . "assets/img/favicon.ico" ?> type="ico">
     <link href="<?= base_url('assets/'); ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-    <link href="<?= base_url('assets/'); ?>css/style.css" rel="stylesheet">
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo base_url() . "assets/css/styleweb.css" ?>" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -22,7 +22,8 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <title $title;></title>
+    <title> <?php echo $title; ?> </title>
+
     <style>
         .budi {
             color: #566787;
@@ -33,6 +34,9 @@
 
         .table-responsive {
             margin: 30px 0;
+            max-height: 528px;
+            overflow: auto;
+            display: inline-block
         }
 
         .table-wrapper {
@@ -57,36 +61,6 @@
             font-size: 24px;
         }
 
-        .table-title .btn {
-            color: #566787;
-            float: right;
-            font-size: 13px;
-            background: #fff;
-            border: none;
-            min-width: 50px;
-            border-radius: 2px;
-            border: none;
-            outline: none !important;
-            margin-left: 10px;
-        }
-
-        .table-title .btn:hover,
-        .table-title .btn:focus {
-            color: #566787;
-            background: #f2f2f2;
-        }
-
-        .table-title .btn i {
-            float: left;
-            font-size: 21px;
-            margin-right: 5px;
-        }
-
-        .table-title .btn span {
-            float: left;
-            margin-top: 2px;
-        }
-
         table.table tr th,
         table.table tr td {
             border-color: #e9e9e9;
@@ -99,7 +73,7 @@
         }
 
         table.table tr th:last-child {
-            width: 100px;
+            width: 60px;
         }
 
         table.table-striped tbody tr:nth-of-type(odd) {

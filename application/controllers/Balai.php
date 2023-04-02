@@ -6,6 +6,9 @@ class Balai extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        $this->load->helper('url', 'form');
+        $this->load->library('form_validation');
+        $this->load->model('DatabaseEsign');
         //is_logged_in();
     }
 
@@ -35,6 +38,8 @@ class Balai extends CI_Controller
     public function kabal()
     {
         $data['title'] = 'E-Sign';
+        $data['dokumen_inskal'] = $this->DatabaseEsign->GetDataDokumenInskal();
+        $data['dokumen_poolbar'] = $this->DatabaseEsign->GetDataDokumenPoolbar();
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
         $this->load->view('templates/header', $data);
@@ -47,6 +52,8 @@ class Balai extends CI_Controller
     public function sekbal()
     {
         $data['title'] = 'E-Sign';
+        $data['dokumen_inskal'] = $this->DatabaseEsign->GetDataDokumenInskal();
+        $data['dokumen_poolbar'] = $this->DatabaseEsign->GetDataDokumenPoolbar();
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
         $this->load->view('templates/header', $data);
@@ -55,6 +62,31 @@ class Balai extends CI_Controller
         $this->load->view('balai/sekbal', $data);
         $this->load->view('templates/footer');
     }
+
+    public function dokumen_inskal()
+    {
+        $data['title'] = 'dokumen_inskal';
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar-1', $data);
+        $this->load->view('templates/topbar-balai', $data);
+        $this->load->view('templates/dokumen_inskal', $data);
+        $this->load->view('templates/footer');
+    }
+
+    public function bidang_observasi()
+    {
+        $data['title'] = 'My Profile';
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar-1', $data);
+        $this->load->view('templates/topbar-balai', $data);
+        $this->load->view('templates/bidang_observasi', $data);
+        $this->load->view('templates/footer');
+    }
+
 
     public function profile()
     {
@@ -155,5 +187,57 @@ class Balai extends CI_Controller
                 }
             }
         }
+    }
+    public function kabal_inskal()
+    {
+        $data['title'] = 'Kabal Balai 1';
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        //visualiasi data
+        $data['dokumen_inskal'] = $this->DatabaseEsign->GetDataDokumenInskal();
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar-balai', $data);
+        $this->load->view('templates/topbar-balai', $data);
+        $this->load->view('balai/kabal_inskal', $data);
+        $this->load->view('templates/footer');
+    }
+    public function kabal_poolbar()
+    {
+        $data['title'] = 'Kabal Balai 1';
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        //visualiasi data
+        $data['dokumen_poolbar'] = $this->DatabaseEsign->GetDataDokumenPoolbar();
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar-balai', $data);
+        $this->load->view('templates/topbar-balai', $data);
+        $this->load->view('balai/kabal_poolbar', $data);
+        $this->load->view('templates/footer');
+    }
+    public function sekbal_inskal()
+    {
+        $data['title'] = 'Sekbal Balai 1';
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        //visualiasi data
+        $data['dokumen_inskal'] = $this->DatabaseEsign->GetDataDokumenInskal();
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar-balai', $data);
+        $this->load->view('templates/topbar-balai', $data);
+        $this->load->view('balai/sekbal_inskal', $data);
+        $this->load->view('templates/footer');
+    }
+    public function sekbal_poolbar()
+    {
+        $data['title'] = 'Sekbal Balai 1';
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        //visualiasi data
+        $data['dokumen_poolbar'] = $this->DatabaseEsign->GetDataDokumenPoolbar();
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar-balai', $data);
+        $this->load->view('templates/topbar-balai', $data);
+        $this->load->view('balai/sekbal_poolbar', $data);
+        $this->load->view('templates/footer');
     }
 }

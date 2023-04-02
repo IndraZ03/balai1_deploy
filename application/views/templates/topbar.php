@@ -12,7 +12,8 @@
                 <img class="d-inline-block align-center" src="<?= base_url('assets/'); ?>img/bmkg-logo.png" alt="logo bmkg" width="66" height="66"></a>
             <div class="topbar-divider d-none d-sm-block"></div>
 
-            <button type="button" class="btn btn-warning ml-2">Peta Wilayah I</button>
+            <button class=" btn btn-warning ml-2">
+                <a href="<?= base_url('map'); ?>"> Peta Wilayah I</a></button>
 
             <!-- Topbar Navbar -->
             <ul class="navbar-nav ml-auto">

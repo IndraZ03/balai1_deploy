@@ -36,7 +36,7 @@
     <!--row kedua -->
     <div class="row ml-5 mr-5 mb-5 mt-5">
         <div class="col-md-4 col-sm-6">
-            <a href="BO.php">
+            <a href="<?= base_url('user/bidang_observasi'); ?>">
                 <div class="serviceBox shadow-lg rounded">
                     <h3 class="title mt-3 text-uppercase">Bidang I Observasi</h3>
                 </div>
@@ -45,18 +45,16 @@
         </div>
 
         <div class="col-md-4 col-sm-6 text-center">
-            <a href="BDI.php">
-                <div class="serviceBox shadow-lg rounded">
-                    <h3 class="title mt-3 text-uppercase">Bidang II Data & Informasi</h3>
-                </div>
-            </a>
+            <div class="serviceBox shadow-lg rounded">
+                <h3 class="title mt-3 text-uppercase">Bidang II Data & Informasi</h3>
+            </div>
 
         </div>
 
         <div class="col-md-4 col-sm-6">
             <a href="A.php">
                 <div class="serviceBox shadow-lg rounded">
-                    <h3 class="title mt-3">A</h3>
+                    <h3 class="title mt-3">Tata Usaha</h3>
                 </div>
             </a>
 
@@ -70,31 +68,11 @@
             <a href="B.php" class="gbh">
                 <div class="serviceBox shadow-lg rounded">
 
-                    <h3 class="title mt-3 text-uppercase">E-Sign</h3>
-                </div>
-            </a>
-
-        </div>
-
-        <div class="col-md-4 col-sm-6 text-center">
-            <a href="B.php" class="gbh">
-                <div class="serviceBox shadow-lg rounded">
-
                     <h3 class="title mt-3 text-uppercase">B</h3>
                 </div>
             </a>
 
         </div>
-        <div class="col-md-4 col-sm-6 text-center">
-            <a href="B.php" class="gbh">
-                <div class="serviceBox shadow-lg rounded">
-
-                    <h3 class="title mt-3 text-uppercase">Menu Manajemen</h3>
-                </div>
-            </a>
-
-        </div>
-
 
 
 
