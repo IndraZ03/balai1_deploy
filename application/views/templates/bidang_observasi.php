@@ -2,7 +2,7 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <p>Halaman Bidang 1 Observasi adalah ...... pengajuan esign. Silakan .....</p>
+    <img class="ml-4" src="<?= base_url("assets/img/") ?>Selamat_bo1.png">
 
 </div>
 <!-- End of Main Content -->
